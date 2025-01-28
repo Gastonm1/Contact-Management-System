@@ -1,4 +1,4 @@
-people = []
+import json
 
 ## Add Function
 def add_person():
@@ -50,20 +50,8 @@ def search_contact(people):
 print("Hi, welcome to the Contact Management System")
 print()
 
-people = [
-    {"name": "Tim",
-     "age" : 24,
-     "email": "tim@nomail.com"
-     },
-     {"name": "Timothy",
-     "age" : 27,
-     "email": "timothy@nomail.com"
-     },
-     {"name": "Joe",
-     "age" : 28,
-     "email": "joe@nomail.com"
-     }
-]
+with open("contacts.json", "r") as f:
+    people = json.load(f)["contacts"]
 
 while True:
     print()
@@ -82,5 +70,8 @@ while True:
         break
     else:
         print("Invalid command.")
+
+with open("contacts.json", "w") as f:
+    people = json.dump({"contacts": people}, f)
 
 print(person)
