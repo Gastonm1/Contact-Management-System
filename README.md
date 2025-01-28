@@ -1,6 +1,6 @@
 # Contact Management System
 
-## A small Python application is designed to help you manage your contacts efficiently. With this application, you can add, delete and search for contacts, and all changes are automatically saved to a `contacts.json` file for easy access and persistent storage.
+A small Python application is designed to help you manage your contacts efficiently. With this application, you can add, delete and search for contacts, and all changes are automatically saved to a `contacts.json` file for easy access and persistent storage.
 
 ## Features
 
